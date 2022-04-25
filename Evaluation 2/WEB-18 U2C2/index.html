@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* TOP SECTION */
+
+      #header{
+        text-align: center;
+        width: 40%;
+        margin: auto;
+      }
+      #doctors{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 15px;
+        width: 90%;
+        margin: auto;
+        margin-top:30px;
+      }
+      #doctors>div{
+        text-align: center;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      }
+      #doctors>div>img{
+        width: 100%;
+      }
+      #doctors>div>h6{
+        margin-top: -12px;
+      }
+      #doctors>div>p{
+        padding:0px 12px 20px 12px;
+      }
+      .buttons-div{
+        display: flex;
+        justify-content: space-between ;
+      }
+      .buttons-div>button{
+        border: 0px;
+        border-radius: 13px;
+        padding:10px 15px 10px 15px;
+        margin: 0px 8px 15px 8px;
+        color: #5ebdda;
+      }
+      .buttons-div>button:last-child{
+        background-color: #fb7357;
+        color:white;
+      }
+
+
+      /* BOTTOM */
+
+      #service{
+        display:grid;
+        width: 90%;
+        margin: auto;
+        grid-template-columns: repeat(3,1fr);
+        gap: 10px;
+        margin-top:30px;
+        text-align: center;
+      }
+      #service>div{
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      }
+      #service>div>img{
+        margin-top: 20px;
+      }
+      #service>div>p{
+        padding:10px;
+      }
+
+      /* Medium screens */
+      @media all and (min-width: 451px) and (max-width: 750px) {
+        #doctors{
+          display: grid;
+          grid-template-columns: repeat(2,1fr);
+          
+        }
+      }
+      /* Small screens */
+      @media all and (min-width: 100px) and (max-width: 450px) {
+        #doctors{
+          display: grid;
+          grid-template-columns: repeat(1,1fr);
+        }
+        #service{
+          grid-template-columns: repeat(2,1fr);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header">
+      <h1>Our Specialist</h1>
+      <p>
+        Green above he cattle god saw day multiply under fill in the cattle fowl
+        a all, living, tree word link available in the service for subdue fruit.
+      </p>
+    </div>
+    <!-- Top-section -->
+    <div id="doctors">
+      <div>
+        <img src=" https://preview.colorlib.com/theme/medino/assets/images/doctor1.jpg.webp
+" alt="">
+        <!-- keep image,h3,h6 here -->
+        <h3>ETHEL DAVIS</h3>
+        <h6>SR. FACULTY DATA SCIENCE</h6>
+        <P>If you are looking at blank cassettes on the web, you may be very confused at the.</P>
+        <div class="buttons-div">
+          <button>Know More</button>
+          <button>Book Now</button>
+        </div>
+      </div>
+      <div>
+        <!-- keep image,h3,h6 here -->
+        <img src=" https://preview.colorlib.com/theme/medino/assets/images/doctor1.jpg.webp
+" alt="">
+        <h3>DAND MORIES</h3>
+        <h6>SR. FACULTY PLASTIC SURGERY</h6>
+        <P>If you are looking at blank cassettes on the web, you may be very confused at the.</P>
+        <div class="buttons-div">
+          <button>Know More</button>
+          <button>Book Now</button>
+        </div>
+      </div>
+      <div>
+        <!-- keep image,h3,h6 here -->
+        <img src=" https://preview.colorlib.com/theme/medino/assets/images/doctor1.jpg.webp
+" alt="">
+        <h3>ALIGN BOARD</h3>
+        <h6>SR. FACULTY PLASTIC SURGERY</h6>
+        <P>If you are looking at blank cassettes on the web, you may be very confused at the.</P>
+        <div class="buttons-div">
+          <button>Know More</button>
+          <button>Book Now</button>
+        </div>
+      </div>
+      <div>
+        <!-- keep image,h3,h6 here -->
+        <img src=" https://preview.colorlib.com/theme/medino/assets/images/doctor1.jpg.webp
+" alt="">
+        <h3>JESON LIMIT</h3>
+        <h6>SR. FACULTY PLASTIC SURGERY</h6>
+        <P>If you are looking at blank cassettes on the web, you may be very confused at the.</P>
+        <div class="buttons-div">
+          <button>Know More</button>
+          <button>Book Now</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom section  -->
+    <div id="service">
+      <div>
+        <img src=" https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-04-16/bottom_132437.jpeg" alt="">
+        <h5>Teeth Whitening</h5>
+        <p>In pretium neque a libero congue. Elit diam lectus. Prasent lacinia vitae sit mattis mollis maximus.</p>
+        <!-- keep image,h5,p here -->
+      </div>
+      <div>
+        <img src=" https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-04-16/bottom_132437.jpeg" alt="">
+        <h5>Teeth Whitening</h5>
+        <p>In pretium neque a libero congue. Elit diam lectus. Prasent lacinia vitae sit mattis mollis maximus.</p>
+        <!-- keep image,h5,p here -->
+      </div>
+      <div>
+        <img src=" https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-04-16/bottom_132437.jpeg" alt="">
+        <h5>Teeth Whitening</h5>
+        <p>In pretium neque a libero congue. Elit diam lectus. Prasent lacinia vitae sit mattis mollis maximus.</p>
+        <!-- keep image,h5,p here -->
+      </div>
+      <div>
+        <img src=" https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-04-16/bottom_132437.jpeg" alt="">
+        <h5>Teeth Whitening</h5>
+        <p>In pretium neque a libero congue. Elit diam lectus. Prasent lacinia vitae sit mattis mollis maximus.</p>
+        <!-- keep image,h5,p here -->
+      </div>
+      <div>
+        <img src=" https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-04-16/bottom_132437.jpeg" alt="">
+        <h5>Teeth Whitening</h5>
+        <p>In pretium neque a libero congue. Elit diam lectus. Prasent lacinia vitae sit mattis mollis maximus.</p>
+        <!-- keep image,h5,p here -->
+      </div>
+      <div>
+        <img src=" https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-04-16/bottom_132437.jpeg" alt="">
+        <h5>Teeth Whitening</h5>
+        <p>In pretium neque a libero congue. Elit diam lectus. Prasent lacinia vitae sit mattis mollis maximus.</p>
+        <!-- keep image,h5,p here -->
+      </div>
+    </div>
+  </body>
+</html>

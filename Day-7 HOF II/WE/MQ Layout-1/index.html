@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        #nav{
+            height: 40px;
+            background-color: yellow;
+        }
+        #container{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: 250px;
+            gap: 12px;
+            margin-top: 20px;
+            grid-template-areas: 
+            "b1 b2 b3 b4";
+        }
+        #container>div:nth-child(1){
+            background-color: red;
+            grid-area: b1;
+        }
+        #container>div:nth-child(2){
+            background-color: green;
+            grid-area: b2;
+        }
+        #container>div:nth-child(3){
+            background-color: blue;
+            grid-area: b3;
+        }
+        #container>div:nth-child(4){
+            background-color: grey;
+            grid-area: b4;
+        }
+        @media all  and (min-width:451px) and (max-width:650px){
+            #container{
+                grid-template-columns: repeat(2,1fr);
+                grid-template-rows: repeat(2,250px);
+                grid-template-areas: 
+                "b1 b3"
+                "b2 b4";
+            }
+        }
+        @media all  and (min-width:100px) and (max-width:450px){
+            #container{
+                grid-template-columns: repeat(1,1fr);
+                grid-template-rows: repeat(4,120px);
+                grid-template-areas: 
+                "b1"
+                "b4"
+                "b2"
+                "b3";
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="nav">
+        Navigation
+    </div>
+    <div id="container">
+        <div>Box 1</div>
+        <div>Box 2</div>
+        <div>Box 3</div>
+        <div>Box 4</div>
+    </div>
+</body>
+</html>

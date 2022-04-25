@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        #top{
+            height: 45px;
+            width: 100%;
+            border: 1px solid white;
+            background-color: #0a0103;
+            display: flex;
+            /* position: relative; */
+            justify-content: center;
+            
+        }
+        #top>p{
+            font-size: 14px;
+        }
+        .tbutton{
+            border: 0px;
+            border-radius: 7px;
+            margin-top: 6px;
+            margin-bottom: 6px;
+            margin-left: 6px;
+            background-color: black;
+            color: red;
+            
+        }
+        .tbutton:hover{
+            background-color: rgb(230, 180, 205);
+        }
+        .navbar{
+            height:90px;
+            width: 100%;
+            border: 1px solid white;
+            background-color: white;
+            display: flex;
+            position: sticky;
+            top: 0px;
+            justify-content: end;
+            
+        }
+        #scroll{
+            height: 5800px  ;
+        }
+        #logo{
+            margin-right: 350px;
+            width: 10%;
+        }
+        button{
+            margin: 25px 0px 25px 0px;
+            border: 0px;
+            background-color: white;
+            font-size: 14px;
+            font-weight: 550;
+
+        }
+        button:hover{
+            background-color: rgb(235, 211, 223);
+            color: red;
+            border-radius: 7px;
+        }
+        #L{
+            margin: 18px 0px 18px 0px;
+            border: 1px solid red;
+            border-radius: 6px;
+            padding: 20px 16px 20px 16px;
+            margin-left: 30px;
+            margin-right: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div id="top">
+        <p>Register for The Coding Classroom and learn the basics of web development for free.</p>
+        <button class="tbutton">REGISTER ></button>
+    </div>
+    <div class="navbar">
+        <img id="logo" src="https://www.masaischool.com/img/navbar/logo.svg" alt="masai">
+        <button>COURES</button>
+        <button>FEES & ISA</button>
+        <button>ABOUT US</button>
+        <button>HIRE FROM US</button>
+        <button>FAQ</button>
+        <button>EVENTS</button>
+        <button id="L">LOGIN</button>
+    </div>
+    <div id="scroll">
+    </div>
+</body>
+</html>

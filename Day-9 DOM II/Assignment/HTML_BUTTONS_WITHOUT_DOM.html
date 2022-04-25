@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            display:grid;
+            gap:8px;
+            width: 85%;
+            height: auto;
+            margin: auto;
+            grid-template-columns: repeat(9,1fr);
+        }
+        #container>div{
+            border-radius: 8px;
+            padding: 5px 10px 5px 10px;
+            /* color: white; */
+        }
+        .b{background-color: #0e79fa;}
+        .g{background-color: #6c757d;}
+        .gr{background-color: #41a646;}
+        .r{background-color: #dd3d45;}
+        .y{background-color: #ffc13d;}
+        .lb{background-color: #16a1b8;}
+        #ow{background-color: #f8f9fa;
+            color: black;}
+        .dg{background-color: #343a3f;}
+        #blu{color: blue;}
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="b">Primary</div>
+        <div class="g">Secondary</div>
+        <div class="gr">Success</div>
+        <div class="r">Danger</div>
+        <div class="y">Warning</div>
+        <div class="lb">Info</div>
+        <div id="ow">Light</div>
+        <div class="dg">Dark</div>
+        <div id="blu">Link</div>
+    </div>
+</body>
+</html>

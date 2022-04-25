@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        body>h1{
+            text-align: center;
+            color: #1d8181;
+        }
+        #body{
+            height: 380px;
+            width: 25%;
+            border: 1px solid white;
+            margin: auto;
+            margin-top: 50px;
+            border-radius: 5px;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        }
+        #body>div{
+            height: 12%;
+            width: 75%;
+            margin: auto;
+            margin-top: 13px;
+            display: flex;
+            border-radius: 8px;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        }
+        #body>div:first-child{
+            margin-top: 45px;
+            border: 1px solid white;
+
+        }
+        #body>div:last-child{
+            margin-bottom: 45px;
+        }
+        #body>div~div div{
+            height: 100%;
+            width: 22%;
+            margin: auto;
+            border-radius: 8px;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            
+        }
+        #body>div~div div>p{
+            text-align: center;
+            font-weight: bold;
+            font-size: large;
+            margin-top: 13px;
+        }
+        #body>div:last-child>div:first-child{
+            background-color: #f94340;
+            color: white;
+        }
+        #body>div:last-child>div:nth-child(3){
+            background-color: black;
+            color: white;
+        }
+        #body>div~div>div:last-child{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Masai Calculator</h1>
+    <div id="body">
+        <div></div>
+        <div>
+            <div>
+                <p>1</p>
+            </div>
+            <div>
+                <p>2</p>
+            </div>
+            <div>
+                <p>3</p>
+            </div>
+            <div>
+                <p>+</p>
+            </div>
+        </div>
+        <div>
+            <div>
+                <p>4</p>
+            </div>
+            <div>
+                <p>5</p>
+            </div>
+            <div>
+                <p>6</p>
+            </div>
+            <div>
+                <p>-</p>
+            </div>
+        </div>
+        <div>
+            <div>
+                <p>7</p>
+            </div>
+            <div>
+                <p>8</p>
+            </div>
+            <div>
+                <p>9</p>
+            </div>
+            <div>
+                <p>x</p>
+            </div>
+        </div>
+        <div>
+            <div>
+                <p>C</p>
+            </div>
+            <div>
+                <p>0</p>
+            </div>
+            <div>
+                <p>=</p>
+            </div>
+            <div>
+                <p>/</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

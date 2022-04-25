@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #nav{
+            background-color: yellow;
+            height: 45px;
+        }
+        #container{
+            display: grid;
+            margin-top: 15px;
+            grid-template-columns: 750px 292px;
+            grid-template-rows: repeat(3,120px);
+            gap: 22px;
+            grid-template-areas: 
+            "r g1"
+            "r g2"
+            "r g3";
+        }
+        #container>div{
+            background-color: green;
+        }
+        #container>div:first-child{
+            background-color: red;
+        }
+        #container>div:nth-child(1){
+            grid-area: r;
+        }
+        #container>div:nth-child(2){
+            grid-area: g1;
+        }
+        #container>div:nth-child(3){
+            grid-area: g2;
+        }
+        #container>div:nth-child(4){
+            grid-area: g3;
+        }
+        @media all and (min-width:451px) and (max-width:750px){
+            #container{
+                grid-template-columns: repeat(3,1fr);
+                grid-template-rows: repeat(3,120px);
+                grid-template-areas: 
+                "r r r"
+                "r r r"
+                "g1 g2 g3";
+            }
+        }
+        @media all and (min-width:100px) and (max-width:450px){
+            #container{
+                grid-template-columns: 100%;
+                grid-template-rows: 200px repeat(3,120px);
+                grid-template-areas: 
+                "r"
+                "g1"
+                "g2"
+                "g3";
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="nav">
+        Navigator
+    </div>
+    <div id="container">
+        <div>LEFT BOX</div>
+        <div>RIGHT BOX 1</div>
+        <div>RIGHT BOX 2</div>
+        <div>RIGHT BOX 3</div>
+    </div>
+</body>
+</html>

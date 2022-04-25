@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="age" type="Number" placeholder="Age">
+    <button onclick="ageverify()">Check Age</button>
+    <p id="verdict">Verdict</p>
+</body>
+</html>
+<script>
+    function ageverify(){
+        var agecheck=document.getElementById("age").value
+        if(agecheck>18){document.getElementById("verdict").innerText="You can drive in India!"}
+        else if(agecheck==18){document.getElementById("verdict").innerText="You are just old enough to drive in India!"}
+        else{document.getElementById("verdict").innerText="You can't drive in India"}
+    }
+</script>

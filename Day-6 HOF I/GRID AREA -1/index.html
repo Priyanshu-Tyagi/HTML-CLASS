@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>GRID AREA-1</title>
+    <style>
+        #container{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: repeat(3,60px);
+            gap: 10px;
+            grid-template-areas: 
+            "a a b b"
+            "c d d d"
+            "e e e e"
+        }
+        #container>div{
+            background-color: darkgrey;
+            border-radius: 8px;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            padding-left: 20px;
+        }
+        #container>div:nth-child(1){
+            grid-area: a;
+        }
+        #container>div:nth-child(2){
+            grid-area: b;
+        }
+        #container>div:nth-child(3){
+            grid-area: c;
+        }
+        #container>div:nth-child(4){
+            grid-area: d;
+        }
+        #container>div:nth-child(5){
+            grid-area: e;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div>A</div>
+        <div>B</div>
+        <div>C</div>
+        <div>D</div>
+        <div>E</div>
+    </div>
+</body>
+</html>
