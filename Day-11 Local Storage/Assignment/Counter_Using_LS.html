@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1></h1>
+    <button id="inc">Increase</button>
+    <button id="dec">Decrease</button>
+</body>
+</html>
+<script>
+    var count=localStorage.getItem("counted")||0
+    document.querySelector("h1").innerText=count;
+    // JSON.parse(localStorage.getItem(counted))||0;
+
+    document.getElementById("inc").addEventListener("click",function(){count++;console.log(count);localStorage.setItem("counted",count);document.querySelector("h1").innerText=count;});
+    document.getElementById("dec").addEventListener("click",function(){count--;console.log(count);localStorage.setItem("counted",count);document.querySelector("h1").innerText=count;});
+</script>
