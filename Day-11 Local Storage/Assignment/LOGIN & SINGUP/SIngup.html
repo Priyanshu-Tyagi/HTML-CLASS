@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{text-align: center;}
+        #container{
+            width: 45%;
+            margin: auto;
+        }
+        #form{
+            border: 1px solid red;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content:space-around;
+            padding: 20px;
+        }
+        #form>input{
+            display: block;
+            width: 80%;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <p><img src="https://sso.masaischool.com/brand_dark.svg" alt=""></p>
+    <h1>Sing Up</h1>
+    <div id="container">
+        <form id="form">
+            <input id="name" type="text" placeholder="Enter your Name" required>
+            <input id="number" type="number" placeholder="Enter your Mobile No." required>
+            <input id="pass" type="password" placeholder="Enter your Password" required>
+            <input type="submit">
+        </form>
+    </div>
+</body>
+</html>
+
+<script>
+//All variables
+
+// var form=document.querySelector("#form");
+var singupData=JSON.parse(localStorage.getItem("userData"))||[];
+
+
+//All functions
+
+form.addEventListener("submit",submitting);
+
+function submitting(){
+    event.preventDefault()
+
+    Data={
+        username:form.name.value,
+        usernumber:form.number.value,
+        userpass:form.pass.value
+    };
+
+    singupData.push(Data);
+    localStorage.setItem("userData",JSON.stringify(singupData))
+    console.log(Data,Data.username,Data.userpass,Data.usernumber)
+    window.location.assign("./Login.html")
+}
+</script>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{text-align: center;}
+        #logincontainer{
+            width: 45%;
+            margin: auto;
+        }
+        #loginform{
+            border: 1px solid red;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content:space-around;
+            padding: 20px;
+        }
+        #loginform>input{
+            display: block;
+            width: 80%;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <p><img src="https://sso.masaischool.com/brand_dark.svg" alt=""></p>
+    <h1>Log In</h1>
+    <div id="logincontainer">
+        <form id="loginform">
+            <input id="logname" type="text" placeholder="Enter your Name" required>
+            <input id="logpass" type="password" placeholder="Enter your Password" required>
+            <input type="submit">
+        </form>
+    </div>
+</body>
+</html>
+<script>
+    var singupData=JSON.parse(localStorage.getItem("userData"));
+    loginform.addEventListener("submit",submitting);
+
+    function submitting(){
+        event.preventDefault();
+        var enteredname=document.getElementById("logname");
+        var enteredpass=document.getElementById("logpass");
+        singupData.forEach(function(el){
+            if(enteredname.value==el.username && enteredpass.value==el.userpass){alert("Login Successful")}
+            else{alert("Login Failed")}
+        })
+    };
+</script>
