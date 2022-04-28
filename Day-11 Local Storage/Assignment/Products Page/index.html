@@ -314,9 +314,12 @@ var mensData = [
         var strikedoffprice=document.createElement("p");
         strikedoffprice.innerText=el.strikedoffprice;
         strikedoffprice.setAttribute("id","crossed");
+        var btn=document.createElement("button");
+        btn.innerText="Add to cart"
 
         // console.log(el.image_url)
-        card.append(image,name,price,strikedoffprice);
+        card.append(image,name,price,strikedoffprice,btn);
+        
         mensection.append(card);
     })
 
