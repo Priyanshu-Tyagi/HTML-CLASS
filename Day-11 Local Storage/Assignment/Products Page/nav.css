@@ -1,0 +1,16 @@
+#navbar{
+    display: flex;
+    background-color: rgb(231, 231, 231);
+}
+#logo{
+    width: 35%;
+    padding: 0px 20px;
+}
+#category{
+    display: flex; 
+    justify-content: space-around;
+}
+#category>h1{
+    margin-left: 80px;
+    text-decoration:none;
+}
