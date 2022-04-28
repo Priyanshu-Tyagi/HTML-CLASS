@@ -46,8 +46,7 @@
         var enteredname=document.getElementById("logname");
         var enteredpass=document.getElementById("logpass");
         singupData.forEach(function(el){
-            if(enteredname.value==el.username && enteredpass.value==el.userpass){alert("Login Successful")}
-            else{alert("Login Failed")}
+            if(enteredname.value==el.username && enteredpass.value==el.userpass){alert("Login Successful")}else if(enteredname.value!==el.username){return;}else{alert("Login Failed")}
         })
     };
 </script>
