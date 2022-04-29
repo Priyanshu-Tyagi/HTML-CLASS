@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Database</title>
+    <link rel="stylesheet" href="commonStyles.css" />
+  </head>
+
+  <body>
+    <div id="links">
+      <div><a href="index.html">Home</a></div>
+      <div><a href="applied.html">Applied Jobs</a></div>
+      <div><a href="bookmark.html">Bookmarks</a></div>
+    </div>
+
+    <main>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Job applied</th>
+            <th>Salary expected</th>
+            <th>Add to bookmark</th>
+          </tr>
+        </thead>
+        <tbody id="body">
+          <!-- Append your output to tbody -->
+        </tbody>
+      </table>
+    </main>
+  </body>
+  <script>
+    //you need to code here
+    var appliedjobs=JSON.parse(localStorage.getItem("jobList"));
+    var bookmark=JSON.parse(localStorage.getItem("bookmarkData"))||[];
+
+    window.addEventListener("load",function(){
+      display(appliedjobs)
+    })
+
+    function display(appliedjobs){
+      appliedjobs.map(function(ele){
+        var row=document.createElement("tr");
+
+        var td1=document.createElement("td");
+        td1.innerText=ele.name;
+
+        var td2=document.createElement("td");
+        td2.innerText=ele.email;
+
+        var td3=document.createElement("td");
+        td3.innerText=ele.role;
+
+        var td4=document.createElement("td");
+        td4.innerText=ele.salary;
+
+        var td5=document.createElement("tr");
+        td5.innerText="Bookmark";
+        td5.style.color="blue";
+        td5.style.cursor="pointer";
+        td5.style.textAlign="center"
+        td5.addEventListener("click",function(){addtobookmark(ele)});
+
+        row.append(td1,td2,td3,td4,td5);
+        document.querySelector("#body").append(row);
+      })
+    }
+
+    function addtobookmark(ele){
+      bookmark.push(ele);
+      localStorage.setItem("bookmarkData",JSON.stringify(bookmark));
+    }
+  </script>
+</html>
